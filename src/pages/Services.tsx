@@ -119,14 +119,10 @@ const Services = () => {
                 <div className={`flex items-center justify-between mt-auto ${
                   index === 1 ? 'pt-4' : ''
                 }`}>
-                  <span className={`font-semibold text-red-600 whitespace-nowrap ${
-                    index === 1 ? 'text-lg lg:text-xl' : 'text-base lg:text-lg'
-                  }`}>{service.price}</span>
+                  <span className="font-semibold text-red-600 whitespace-nowrap text-base lg:text-lg">{service.price}</span>
                   <Link
                     to="/contact"
-                    className={`text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap ${
-                      index === 1 ? 'text-base lg:text-lg' : ''
-                    }`}
+                    className="text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap"
                   >
                     Get Quote
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

@@ -148,16 +148,7 @@ const Home = () => {
             </div>
             <div className="relative">
               <div className="rounded-2xl shadow-2xl overflow-hidden">
-                <iframe 
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.8567375693638!2d-102.28579932351337!3d48.344058936763695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5320a3a83ec6660d%3A0xa31a8a7e77811f54!2sBatteiger%20Lawn%20Service.%20Snow%20Removal%20%26%20Weed%20Control!5e0!3m2!1sfr!2sca!4v1753627569465!5m2!1sfr!2sca" 
-                  width="600" 
-                  height="450" 
-                  style={{border:0}} 
-                  allowFullScreen={true} 
-                  loading="lazy" 
-                  referrerPolicy="no-referrer-when-downgrade"
-                  className="w-full h-auto"
-                />
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2651.8567375693638!2d-102.28579932351337!3d48.344058936763695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5320a3a83ec6660d%3A0xa31a8a7e77811f54!2sBatteiger%20Lawn%20Service.%20Snow%20Removal%20%26%20Weed%20Control!5e0!3m2!1sfr!2sca!4v1753663635580!5m2!1sfr!2sca" width="600" height="450" style={{border:0}} allowFullScreen={true} loading="lazy" referrerPolicy="no-referrer-when-downgrade" className="w-full h-auto"></iframe>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white p-4 rounded-lg shadow-lg">
                 <div className="flex items-center space-x-2">
