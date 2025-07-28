@@ -140,7 +140,7 @@ const Services = () => {
       </section>
 
       {/* Snow Removal Services */}
-      <section id="snow-removal-services" className="py-20 bg-gradient-to-br from-red-50 to-white">
+      <section id="snow-removal-services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <div className="w-16 h-16 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -155,27 +155,44 @@ const Services = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {snowServices.map((service, index) => (
               <div
                 key={index}
-                className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+                className="bg-white rounded-2xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 flex flex-col p-6 lg:p-8 min-h-[400px]"
               >
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">{service.title}</h3>
-                <p className="text-gray-600 mb-6 leading-relaxed">{service.description}</p>
-                <ul className="space-y-2 mb-6">
+                {/* Header section - fixed at top */}
+                <div className="mb-4">
+                  <h3 className="text-xl lg:text-2xl font-bold text-gray-900 mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-600 leading-relaxed text-sm lg:text-base">
+                    {service.description}
+                  </p>
+                </div>
+                
+                {/* Features list - takes up remaining space */}
+                <ul className="space-y-2 flex-grow mb-6">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center space-x-2">
                       <CheckCircle className="w-5 h-5 text-red-600 flex-shrink-0" />
-                      <span className="text-gray-700">{feature}</span>
+                      <span className="text-gray-700 text-sm lg:text-base">
+                        {feature}
+                      </span>
                     </li>
                   ))}
                 </ul>
-                <div className="flex items-center justify-between">
-                  <span className="text-lg font-semibold text-red-600">{service.price}</span>
+                
+                {/* Bottom section - anchored to bottom with proper spacing */}
+                <div className="flex items-end justify-between mt-auto pt-4 border-t border-red-100">
+                  {/* Price positioned at bottom-left */}
+                  <span className="font-semibold text-red-600 whitespace-nowrap text-base lg:text-lg self-end">
+                    {service.price}
+                  </span>
+                  {/* Get Quote button positioned at bottom-right */}
                   <Link
                     to="/contact"
-                    className="text-red-600 font-semibold hover:text-red-700 inline-flex items-center group"
+                    className="text-red-600 font-semibold hover:text-red-700 inline-flex items-center group whitespace-nowrap text-base lg:text-lg self-end ml-4"
                   >
                     Get Quote
                     <ArrowRight className="ml-1 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
